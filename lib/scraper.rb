@@ -23,7 +23,8 @@ class Scraper
     doc = Nokogiri::HTML(open(index_url))
     student = Hash.new
     
-    
+        social_icons = doc.css("div.social-icon-container a").collect {|x| x.attribute("href").value}
+        
     
   end
 
